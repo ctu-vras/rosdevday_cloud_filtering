@@ -1,0 +1,57 @@
+laser_filter:
+    scan_filter_chain:
+    -   name: RobotBodyFilter
+        type: robot_body_filter/RobotBodyFilterLaserScan
+        params:
+            frames/fixed: '$(arg tf_prefix)base_link'
+            frames/sensor: '$(arg tf_prefix)laser/laser'
+            filter/keep_clouds_organized: True
+            sensor/point_by_point: False
+            sensor/min_distance: 0.03
+            sensor/max_distance: 50.0
+            ignored_links/bounding_sphere: ["$(arg tf_prefix)antenna", "$(arg tf_prefix)base_link::big_collision_box"]
+            ignored_links/shadow_test: ["$(arg tf_prefix)laser", "$(arg tf_prefix)base_link::big_collision_box"]
+            body_model/inflation/scale: 1.07
+            body_model/inflation/padding: 0.01
+            transforms/buffer_length: 60.0
+            transforms/timeout/reachable: 0.2
+            transforms/timeout/unreachable: 0.2
+            # Bounding sphere
+            bounding_sphere/compute: True
+            bounding_sphere/debug: True
+            bounding_sphere/marker: True
+            bounding_sphere/publish_cut_out_pointcloud: True
+            # Bounding box
+            bounding_box/compute: True
+            bounding_box/debug: True
+            bounding_box/marker: True
+            bounding_box/publish_cut_out_pointcloud: True
+            # Local bounding box
+            local_bounding_box/frame_id: "$(arg tf_prefix)base_link"
+            local_bounding_box/compute: True
+            # Debug clouds/markers
+            debug/pcl/inside: True
+            debug/pcl/clip: True
+            debug/pcl/shadow: True
+            debug/marker/contains: True
+            debug/marker/shadow: True
+
+realsense_filter:
+    cloud_filter_chain:
+        -   name: body_filter
+            type: robot_body_filter/RobotBodyFilterPointCloud2
+            params:
+                frames/filtering: '$(arg tf_prefix)base_link/camera'
+                only_links: [
+                    "$(arg tf_prefix)laser",
+                    "$(arg tf_prefix)front_left_flipper_wheel1", "$(arg tf_prefix)front_right_flipper_wheel1",
+                    "$(arg tf_prefix)front_left_flipper_wheel2", "$(arg tf_prefix)front_right_flipper_wheel2",
+                    "$(arg tf_prefix)front_left_flipper_wheel3", "$(arg tf_prefix)front_right_flipper_wheel3",
+                    "$(arg tf_prefix)front_left_flipper_wheel4", "$(arg tf_prefix)front_right_flipper_wheel4",
+                    "$(arg tf_prefix)front_left_flipper_wheel5", "$(arg tf_prefix)front_right_flipper_wheel5",
+                    "$(arg tf_prefix)left_track_wheel1", "$(arg tf_prefix)right_track_wheel1"
+                ]
+                body_model/inflation/scale: 1.35
+                body_model/inflation/padding: 0.01
+                filter/do_clipping: False
+                filter/do_shadow_test: False

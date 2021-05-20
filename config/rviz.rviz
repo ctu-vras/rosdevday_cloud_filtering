@@ -65,32 +65,358 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
+        X1/antenna:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         X1/base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        X1/front_left_wheel_link:
+        X1/battery:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        X1/front_right_wheel_link:
+        X1/camera_0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        X1/camera_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        X1/camera_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        X1/camera_3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        X1/camera_4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        X1/camera_5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        X1/camera_back_mounting_plane:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        X1/camera_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        X1/rear_left_wheel_link:
+        X1/camera_link_sim:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        X1/camera_tripod_screw_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        X1/front_left_flipper:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        X1/rear_right_wheel_link:
+        X1/front_left_flipper_end_point:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        X1/front_left_flipper_wheel1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        X1/sensor_rack:
+        X1/front_left_flipper_wheel2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/front_left_flipper_wheel3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/front_left_flipper_wheel4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/front_left_flipper_wheel5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/front_right_flipper:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/front_right_flipper_end_point:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        X1/front_right_flipper_wheel1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/front_right_flipper_wheel2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/front_right_flipper_wheel3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/front_right_flipper_wheel4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/front_right_flipper_wheel5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/imu:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        X1/jetson:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/laser:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/laser_base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        X1/left_track:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/left_track_wheel1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/left_track_wheel2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/left_track_wheel3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/left_track_wheel4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/left_track_wheel5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/left_track_wheel6:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/left_track_wheel7:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/left_track_wheel8:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/mobilicom:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/mobilicom_antenna_l:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/mobilicom_antenna_r:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/omnicam:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/omnicam_bottom:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        X1/omnicam_forward:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        X1/omnicam_sensor_mount:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/omnicam_top:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        X1/realsense_holder_part2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/rear_left_flipper:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/rear_left_flipper_end_point:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        X1/rear_left_flipper_wheel1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/rear_left_flipper_wheel2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/rear_left_flipper_wheel3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/rear_left_flipper_wheel4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/rear_left_flipper_wheel5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/rear_right_box:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        X1/rear_right_flipper:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/rear_right_flipper_end_point:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        X1/rear_right_flipper_wheel1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/rear_right_flipper_wheel2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/rear_right_flipper_wheel3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/rear_right_flipper_wheel4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/rear_right_flipper_wheel5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/rear_sensor_item:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/right_track:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/right_track_wheel1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/right_track_wheel2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/right_track_wheel3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/right_track_wheel4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/right_track_wheel5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/right_track_wheel6:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/right_track_wheel7:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/right_track_wheel8:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        X1/top_box:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -159,6 +485,66 @@ Visualization Manager:
           Size (m): 0.009999999776482582
           Style: Flat Squares
           Topic: points_filtered
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/LaserScan
+          Color: 204; 0; 0
+          Color Transformer: FlatColor
+          Decay Time: 6
+          Enabled: false
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 0
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: Lidar Original
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.029999999329447746
+          Style: Flat Squares
+          Topic: front_scan
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: false
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/LaserScan
+          Color: 115; 210; 22
+          Color Transformer: FlatColor
+          Decay Time: 6
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 0
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: Lidar Filtered
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.029999999329447746
+          Style: Flat Squares
+          Topic: front_scan_filtered
           Unreliable: false
           Use Fixed Frame: true
           Use rainbow: true
@@ -691,13 +1077,13 @@ Visualization Manager:
       Color: 255; 255; 255
       Color Transformer: RGB8
       Decay Time: 0
-      Enabled: true
+      Enabled: false
       Invert Rainbow: false
       Max Color: 255; 255; 255
       Max Intensity: 4096
       Min Color: 0; 0; 0
       Min Intensity: 0
-      Name: Husky RGBD
+      Name: Husky/Absolem RGBD
       Position Transformer: XYZ
       Queue Size: 10
       Selectable: true
@@ -705,6 +1091,36 @@ Visualization Manager:
       Size (m): 0.009999999776482582
       Style: Flat Squares
       Topic: rgbd_camera/depth/points
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: RGB8
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 4096
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: Husky/Absolem RGBD Filtered
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic: rgbd_camera/depth/points_filtered
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
@@ -737,25 +1153,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 5.277319431304932
+      Distance: 4.6189494132995605
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.6765828132629395
-        Y: 1.4288179874420166
-        Z: 0
+        X: -0.11918094754219055
+        Y: 0.4347745180130005
+        Z: -1.1920928955078125e-7
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.27039840817451477
+      Pitch: 1.020397424697876
       Target Frame: X1
       Value: ThirdPersonFollower (rviz)
-      Yaw: 0.7603983879089355
+      Yaw: 2.7004058361053467
     Saved: ~
 Window Geometry:
   Displays:
