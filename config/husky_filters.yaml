@@ -1,0 +1,34 @@
+cloud_filter_chain:
+-   name: body_filter
+    type: robot_body_filter/RobotBodyFilterPointCloud2
+    params:
+        frames/filtering: '$(arg tf_prefix)base_link'
+        frames/output: '$(arg tf_prefix)sensor_rack/front_lidar'
+        sensor/point_by_point: False
+        sensor/min_distance: 0.25
+        sensor/max_distance: 50.0
+        only_links: ["$(arg tf_prefix)base_link", "$(arg tf_prefix)sensor_rack"]
+        ignored_links/shadow_test: ["$(arg tf_prefix)sensor_rack::collision_laser"]
+        body_model/inflation/scale: 1.01
+        body_model/inflation/padding: 0.01
+        body_model/inflation/per_link/scale:
+            "$(arg tf_prefix)sensor_rack::collision_base::shadow": 0.88
+            "$(arg tf_prefix)sensor_rack::collision_top::shadow": 0.6
+        filter/do_clipping: True
+        filter/do_shadow_test: True
+        # Bounding sphere
+        bounding_sphere/compute: True
+        bounding_sphere/debug: True
+        bounding_sphere/marker: True
+        bounding_sphere/publish_cut_out_pointcloud: True
+        # Bounding box
+        bounding_box/compute: True
+        bounding_box/debug: True
+        bounding_box/marker: True
+        bounding_box/publish_cut_out_pointcloud: True
+        # Debug clouds/markers
+        debug/pcl/inside: True
+        debug/pcl/clip: True
+        debug/pcl/shadow: True
+        debug/marker/contains: True
+        debug/marker/shadow: True
