@@ -1,0 +1,26 @@
+<launch>
+    <arg name="robot" default="X1" />
+    <arg name="rate" default="1.0" />
+    <arg name="rviz" default="true" />
+    <arg name="gazebo" default="true" doc="If false, the filter will run on a bag file" />
+    <arg name="gazebo_gui" default="true" />
+    <arg name="software_rendering" default="true" doc="Set to false if your GPU can do OpenGL 3.3" />
+    <arg name="data_dir" default="$(dirname)/../data" />
+
+    <arg name="tf_prefix" value="$(arg robot)/" if="$(eval robot != '')" />
+    <arg name="tf_prefix" value="" if="$(eval robot == '')" />
+
+    <include file="$(dirname)/common.launch" pass_all_args="true">
+        <arg name="robot_name" value="$(arg robot)" />
+        <arg name="robot" value="marv" />
+    </include>
+
+    <group ns="$(arg robot)">
+        <node name="laser_filter" pkg="sensor_filters" type="pointcloud2_filter_chain" required="true">
+            <rosparam command="load" file="$(dirname)/../config/marv_filters.yaml" subst_value="true" />
+
+            <remap from="~input" to="points" />
+            <remap from="~output" to="points_filtered" />
+        </node>
+    </group>
+</launch>

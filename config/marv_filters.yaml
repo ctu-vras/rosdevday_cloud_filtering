@@ -1,0 +1,49 @@
+cloud_filter_chain:
+-   name: body_filter
+    type: robot_body_filter/RobotBodyFilterPointCloud2
+    params:
+        frames/filtering: '$(arg tf_prefix)laser/laser'
+        sensor/point_by_point: False
+        sensor/min_distance: 0.25
+        sensor/max_distance: 50.0
+        ignored_links/contains_test: [
+                "$(arg tf_prefix)battery1", "$(arg tf_prefix)battery2",
+                "$(arg tf_prefix)front_cam", "$(arg tf_prefix)rear_cam",
+                "$(arg tf_prefix)base_link::1", "$(arg tf_prefix)base_link::2", "$(arg tf_prefix)base_link::3",
+        ]
+        ignored_links/shadow_test: [
+                "$(arg tf_prefix)laser", "$(arg tf_prefix)top_box::0",
+                "$(arg tf_prefix)battery1", "$(arg tf_prefix)battery2",
+                "$(arg tf_prefix)camera1", "$(arg tf_prefix)camera3",
+                "$(arg tf_prefix)front_cam", "$(arg tf_prefix)rear_cam",
+                "$(arg tf_prefix)base_link::1", "$(arg tf_prefix)base_link::2", "$(arg tf_prefix)base_link::3",
+        ]
+        body_model/inflation/scale: 1.01
+        body_model/inflation/padding: 0.01
+        body_model/inflation/per_link/padding:
+            "$(arg tf_prefix)mobilicom_antenna_l::contains": 0.07
+            "$(arg tf_prefix)mobilicom_antenna_r::contains": 0.07
+            "$(arg tf_prefix)base_link::0::contains": 0.07
+            "$(arg tf_prefix)front_left_flipper::contains": 0.03
+            "$(arg tf_prefix)front_right_flipper::contains": 0.03
+            "$(arg tf_prefix)rear_left_flipper::contains": 0.03
+            "$(arg tf_prefix)rear_right_flipper::contains": 0.03
+            "$(arg tf_prefix)camera_4::shadow": 0.0
+        filter/do_clipping: True
+        filter/do_shadow_test: False
+        # Bounding sphere
+        bounding_sphere/compute: True
+        bounding_sphere/debug: True
+        bounding_sphere/marker: True
+        bounding_sphere/publish_cut_out_pointcloud: True
+        # Bounding box
+        bounding_box/compute: True
+        bounding_box/debug: True
+        bounding_box/marker: True
+        bounding_box/publish_cut_out_pointcloud: True
+        # Debug clouds/markers
+        debug/pcl/inside: True
+        debug/pcl/clip: True
+        debug/pcl/shadow: True
+        debug/marker/contains: True
+        debug/marker/shadow: True

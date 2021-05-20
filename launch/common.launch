@@ -17,7 +17,7 @@
     <param name="/use_sim_time" value="true" />
 
     <!-- This is a helper for automagically downloading the bag files in case they are missing. -->
-    <param name="data_download_log" command="$(dirname)/../data/download_data '$(arg data_dir)'" />
+    <param name="data_download_log" command="$(dirname)/../data/download_data $(arg robot) '$(arg data_dir)'" />
 
     <group unless="$(arg gazebo)">
         <node name="play" pkg="rosbag" type="play" args="--clock --loop --rate $(arg rate) '$(arg data_dir)/$(arg robot).bag'" required="true" />
