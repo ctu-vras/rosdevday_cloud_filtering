@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>rosdevday_cloud_filtering</name>
+  <version>1.0.0</version>
+  <description>Example files for RosDevDay 2021 Workshop on point cloud filtering</description>
+
+  <maintainer email="peckama2@fel.cvut.cz">Martin Pecka</maintainer>
+  <author email="peckama2@fel.cvut.cz">Martin Pecka</author>
+
+  <license>BSD</license>
+
+  <url type="website">https://github.com/ctu-vras/rosdevday_cloud_filtering</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>ctu_cras_norlab_husky_sensor_config_1</exec_depend>
+  <exec_depend>ctu_cras_norlab_lily_sensor_config_1</exec_depend>
+  <exec_depend>ctu_cras_norlab_marv_sensor_config_1</exec_depend>
+  <exec_depend>ctu_cras_norlab_spot_sensor_config_1</exec_depend>
+  <exec_depend>robot_body_filter</exec_depend>
+  <exec_depend>rosbag</exec_depend>
+  <exec_depend>sensor_filters</exec_depend>
+</package>

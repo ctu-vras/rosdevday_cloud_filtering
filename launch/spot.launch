@@ -1,0 +1,46 @@
+<launch>
+    <arg name="data_dir" />
+    <arg name="robot" default="X1" />
+    <arg name="rate" default="1.0" />
+    <arg name="rviz" default="true" />
+
+    <arg name="tf_prefix" value="$(arg robot)/" if="$(eval robot != '')" />
+    <arg name="tf_prefix" value="" if="$(eval robot == '')" />
+
+    <param name="/use_sim_time" value="true" />
+
+    <node name="play" pkg="rosbag" type="play" args="--clock --loop --rate $(arg rate) '$(arg data_dir)/spot2.bag'" />
+
+    <group ns="$(arg robot)">
+        <rosparam command="load" file="$(arg data_dir)/spot.params" />
+        <rosparam command="load" file="$(dirname)/../config/spot_filters.yaml" subst_value="true" />
+
+        <node name="laser_filter" pkg="sensor_filters" type="pointcloud2_filter_chain" required="true">
+            <remap from="~input" to="points" />
+            <remap from="~output" to="points_filtered" />
+        </node>
+
+        <node name="tof_back_filter" pkg="sensor_filters" type="pointcloud2_filter_chain" required="true">
+            <remap from="~input" to="tof_back/depth/points" />
+            <remap from="~output" to="tof_back/depth/points_filtered" />
+        </node>
+        <node name="tof_left_filter" pkg="sensor_filters" type="pointcloud2_filter_chain" required="true">
+            <remap from="~input" to="tof_left/depth/points" />
+            <remap from="~output" to="tof_left/depth/points_filtered" />
+        </node>
+        <node name="tof_right_filter" pkg="sensor_filters" type="pointcloud2_filter_chain" required="true">
+            <remap from="~input" to="tof_right/depth/points" />
+            <remap from="~output" to="tof_right/depth/points_filtered" />
+        </node>
+        <node name="tof_frontleft_filter" pkg="sensor_filters" type="pointcloud2_filter_chain" required="true">
+            <remap from="~input" to="tof_frontleft/depth/points" />
+            <remap from="~output" to="tof_frontleft/depth/points_filtered" />
+        </node>
+        <node name="tof_frontright_filter" pkg="sensor_filters" type="pointcloud2_filter_chain" required="true">
+            <remap from="~input" to="tof_frontright/depth/points" />
+            <remap from="~output" to="tof_frontright/depth/points_filtered" />
+        </node>
+
+        <node name="rviz" pkg="rviz" type="rviz" if="$(arg rviz)" args="-d $(dirname)/../config/rviz.rviz -f $(arg tf_prefix)odom" />
+    </group>
+</launch>
