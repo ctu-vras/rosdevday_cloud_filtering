@@ -8,13 +8,17 @@ cloud_filter_chain:
         sensor/min_distance: 0.25
         sensor/max_distance: 50.0
         ignored_links/contains_test: [
-            "$(arg tf_prefix)front_left_wheel_link", "$(arg tf_prefix)front_right_wheel_link",
-            "$(arg tf_prefix)rear_left_wheel_link", "$(arg tf_prefix)rear_right_wheel_link",
+                "$(arg tf_prefix)front_left_wheel_link", "$(arg tf_prefix)front_right_wheel_link",
+                "$(arg tf_prefix)front_middle_left_wheel_link", "$(arg tf_prefix)front_middle_right_wheel_link",
+                "$(arg tf_prefix)rear_left_wheel_link", "$(arg tf_prefix)rear_right_wheel_link",
+                "$(arg tf_prefix)rear_middle_left_wheel_link", "$(arg tf_prefix)rear_middle_right_wheel_link",
         ]
         ignored_links/shadow_test: [
-            "$(arg tf_prefix)sensor_rack::collision_laser",
-            "$(arg tf_prefix)front_left_wheel_link", "$(arg tf_prefix)front_right_wheel_link",
-            "$(arg tf_prefix)rear_left_wheel_link", "$(arg tf_prefix)rear_right_wheel_link",
+                "$(arg tf_prefix)sensor_rack::collision_laser",
+                "$(arg tf_prefix)front_left_wheel_link", "$(arg tf_prefix)front_right_wheel_link",
+                "$(arg tf_prefix)front_middle_left_wheel_link", "$(arg tf_prefix)front_middle_right_wheel_link",
+                "$(arg tf_prefix)rear_left_wheel_link", "$(arg tf_prefix)rear_right_wheel_link",
+                "$(arg tf_prefix)rear_middle_left_wheel_link", "$(arg tf_prefix)rear_middle_right_wheel_link",
         ]
         body_model/inflation/scale: 1.01
         body_model/inflation/padding: 0.01

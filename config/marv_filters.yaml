@@ -47,3 +47,5 @@ cloud_filter_chain:
         debug/pcl/shadow: True
         debug/marker/contains: True
         debug/marker/shadow: True
+        debug/marker/bounding_sphere: True
+        debug/marker/bounding_box: True

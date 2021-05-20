@@ -1,0 +1,22 @@
+<launch>
+    <arg name="robot_name" />
+
+    <group ns="$(arg robot_name)">
+        <node name="set_rate_omni_camera_0" pkg="rosservice" type="rosservice" args="call --wait omni/camera_0/set_rate 'rate: 0.0001'" />
+        <node name="set_rate_omni_camera_1" pkg="rosservice" type="rosservice" args="call --wait omni/camera_1/set_rate 'rate: 0.0001'" />
+        <node name="set_rate_omni_camera_2" pkg="rosservice" type="rosservice" args="call --wait omni/camera_2/set_rate 'rate: 0.0001'" />
+        <node name="set_rate_omni_camera_3" pkg="rosservice" type="rosservice" args="call --wait omni/camera_3/set_rate 'rate: 0.0001'" />
+        <node name="set_rate_omni_camera_4" pkg="rosservice" type="rosservice" args="call --wait omni/camera_4/set_rate 'rate: 0.0001'" />
+        <node name="set_rate_omni_camera_5" pkg="rosservice" type="rosservice" args="call --wait omni/camera_5/set_rate 'rate: 0.0001'" />
+
+        <node name="set_rate_rear" pkg="rosservice" type="rosservice" args="call --wait rear/set_rate 'rate: 10'" />
+
+        <node name="odom" pkg="rosdevday_cloud_filtering" type="odom_frame_pub">
+            <param name="robot_name" value="$(arg robot_name)" />
+        </node>
+    </group>
+
+    <include file="$(find subt_example)/launch/teleop.launch">
+        <arg name="joystick" value="true" />
+    </include>
+</launch>

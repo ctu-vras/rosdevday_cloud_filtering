@@ -35,6 +35,8 @@ laser_filter:
             debug/pcl/shadow: True
             debug/marker/contains: True
             debug/marker/shadow: True
+            debug/marker/bounding_sphere: True
+            debug/marker/bounding_box: True
 
 realsense_filter:
     cloud_filter_chain:

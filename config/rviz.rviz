@@ -65,358 +65,52 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        X1/antenna:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         X1/base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        X1/battery:
+        X1/front_left_wheel_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        X1/camera_0:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        X1/camera_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        X1/camera_2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        X1/camera_3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        X1/camera_4:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        X1/camera_5:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        X1/camera_back_mounting_plane:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        X1/camera_link:
+        X1/front_middle_left_wheel_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        X1/camera_link_sim:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        X1/camera_tripod_screw_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        X1/front_left_flipper:
+        X1/front_middle_right_wheel_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        X1/front_left_flipper_end_point:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        X1/front_left_flipper_wheel1:
+        X1/front_right_wheel_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        X1/front_left_flipper_wheel2:
+        X1/rear_left_wheel_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        X1/front_left_flipper_wheel3:
+        X1/rear_middle_left_wheel_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        X1/front_left_flipper_wheel4:
+        X1/rear_middle_right_wheel_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        X1/front_left_flipper_wheel5:
+        X1/rear_right_wheel_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        X1/front_right_flipper:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/front_right_flipper_end_point:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        X1/front_right_flipper_wheel1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/front_right_flipper_wheel2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/front_right_flipper_wheel3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/front_right_flipper_wheel4:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/front_right_flipper_wheel5:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/imu:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        X1/jetson:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/laser:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/laser_base:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        X1/left_track:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/left_track_wheel1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/left_track_wheel2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/left_track_wheel3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/left_track_wheel4:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/left_track_wheel5:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/left_track_wheel6:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/left_track_wheel7:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/left_track_wheel8:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/mobilicom:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/mobilicom_antenna_l:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/mobilicom_antenna_r:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/omnicam:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/omnicam_bottom:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        X1/omnicam_forward:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        X1/omnicam_sensor_mount:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/omnicam_top:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        X1/realsense_holder_part2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/rear_left_flipper:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/rear_left_flipper_end_point:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        X1/rear_left_flipper_wheel1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/rear_left_flipper_wheel2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/rear_left_flipper_wheel3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/rear_left_flipper_wheel4:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/rear_left_flipper_wheel5:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/rear_right_box:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        X1/rear_right_flipper:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/rear_right_flipper_end_point:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        X1/rear_right_flipper_wheel1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/rear_right_flipper_wheel2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/rear_right_flipper_wheel3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/rear_right_flipper_wheel4:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/rear_right_flipper_wheel5:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/rear_sensor_item:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/right_track:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/right_track_wheel1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/right_track_wheel2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/right_track_wheel3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/right_track_wheel4:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/right_track_wheel5:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/right_track_wheel6:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/right_track_wheel7:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/right_track_wheel8:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        X1/top_box:
+        X1/sensor_rack:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -651,6 +345,22 @@ Visualization Manager:
           Enabled: false
           Marker Topic: robot_model_for_shadow_test
           Name: ModelForShadowTest
+          Namespaces:
+            {}
+          Queue Size: 100
+          Value: false
+        - Class: rviz/MarkerArray
+          Enabled: false
+          Marker Topic: robot_model_for_bounding_sphere
+          Name: ModelForBoundingSphere
+          Namespaces:
+            {}
+          Queue Size: 100
+          Value: false
+        - Class: rviz/MarkerArray
+          Enabled: false
+          Marker Topic: robot_model_for_bounding_box
+          Name: ModelForBoundingBox
           Namespaces:
             {}
           Queue Size: 100
@@ -1168,10 +878,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.020397424697876
+      Pitch: 0.23539753258228302
       Target Frame: X1
       Value: ThirdPersonFollower (rviz)
-      Yaw: 2.7004058361053467
+      Yaw: 2.1104042530059814
     Saved: ~
 Window Geometry:
   Displays:

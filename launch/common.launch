@@ -2,7 +2,7 @@
     <!--
       This is a common launch file that starts simulation/playback of the given robot type.
      -->
-    <arg name="robot" default="marv" doc="marv,spot,husky,lily,absolem" />
+    <arg name="robot" default="marv" doc="marv,spot,husky,lily,absolem,marmotte,x500" />
     <arg name="robot_name" default="X1" />
     <arg name="rate" default="1.0" />
     <arg name="rviz" default="true" />
