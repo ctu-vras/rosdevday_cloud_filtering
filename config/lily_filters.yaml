@@ -1,0 +1,32 @@
+cloud_filter_chain:
+-   name: body_filter
+    type: robot_body_filter/RobotBodyFilterPointCloud2
+    params:
+        frames/filtering: '$(arg tf_prefix)main_ouster_lidar/laser'
+        sensor/point_by_point: False
+        sensor/min_distance: 0.3
+        sensor/max_distance: 50.0
+        ignored_links/contains_test: []
+        ignored_links/shadow_test: [
+                "$(arg tf_prefix)main_ouster_lidar"
+        ]
+        body_model/inflation/scale: 1.01
+        body_model/inflation/padding: 0.05
+        filter/do_clipping: True
+        filter/do_shadow_test: False
+        # Bounding sphere
+        bounding_sphere/compute: True
+        bounding_sphere/debug: True
+        bounding_sphere/marker: True
+        bounding_sphere/publish_cut_out_pointcloud: True
+        # Bounding box
+        bounding_box/compute: True
+        bounding_box/debug: True
+        bounding_box/marker: True
+        bounding_box/publish_cut_out_pointcloud: True
+        # Debug clouds/markers
+        debug/pcl/inside: True
+        debug/pcl/clip: True
+        debug/pcl/shadow: True
+        debug/marker/contains: True
+        debug/marker/shadow: True
