@@ -1,0 +1,35 @@
+<launch>
+    <!--
+      This is a common launch file that starts simulation/playback of the given robot type.
+     -->
+    <arg name="robot" default="marv" doc="marv,spot,husky,lily,absolem" />
+    <arg name="robot_name" default="X1" />
+    <arg name="rate" default="1.0" />
+    <arg name="rviz" default="true" />
+    <arg name="gazebo" default="true" doc="If false, the filter will run on a bag file" />
+    <arg name="gazebo_gui" default="true" />
+    <arg name="software_rendering" default="true" doc="Set to false if your GPU can do OpenGL 3.3" />
+    <arg name="data_dir" default="$(dirname)/../data" />
+
+    <arg name="tf_prefix" value="$(arg robot_name)/" if="$(eval robot_name != '')" />
+    <arg name="tf_prefix" value="" if="$(eval robot_name == '')" />
+
+    <param name="/use_sim_time" value="true" />
+
+    <!-- This is a helper for automagically downloading the bag files in case they are missing. -->
+    <param name="data_download_log" command="$(dirname)/../data/download_data '$(arg data_dir)'" />
+
+    <group unless="$(arg gazebo)">
+        <node name="play" pkg="rosbag" type="play" args="--clock --loop --rate $(arg rate) '$(arg data_dir)/$(arg robot).bag'" required="true" />
+        <rosparam command="load" file="$(dirname)/../data/$(arg robot).params" ns="$(arg robot_name)" />
+    </group>
+
+    <include file="$(dirname)/gazebo.launch" if="$(arg gazebo)" pass_all_args="true">
+        <arg name="gui" value="$(arg gazebo_gui)" />
+        <arg name="real_time_factor" value="$(arg rate)" />
+    </include>
+
+    <group ns="$(arg robot_name)">
+        <node name="rviz" pkg="rviz" type="rviz" if="$(arg rviz)" args="-d $(dirname)/../config/rviz.rviz -f $(arg tf_prefix)odom" />
+    </group>
+</launch>

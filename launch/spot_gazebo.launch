@@ -1,0 +1,31 @@
+<launch>
+    <arg name="robot_name" />
+
+    <group ns="$(arg robot_name)">
+        <node name="set_rate_back" pkg="rosservice" type="rosservice" args="call --wait back/set_rate 'rate: 0.0001'" />
+        <node name="set_rate_frontleft" pkg="rosservice" type="rosservice" args="call --wait frontleft/set_rate 'rate: 0.0001'" />
+        <node name="set_rate_frontright" pkg="rosservice" type="rosservice" args="call --wait frontright/set_rate 'rate: 0.0001'" />
+        <node name="set_rate_left" pkg="rosservice" type="rosservice" args="call --wait left/set_rate 'rate: 0.0001'" />
+        <node name="set_rate_omni_camera_0" pkg="rosservice" type="rosservice" args="call --wait omni/camera_0/set_rate 'rate: 0.0001'" />
+        <node name="set_rate_omni_camera_1" pkg="rosservice" type="rosservice" args="call --wait omni/camera_1/set_rate 'rate: 0.0001'" />
+        <node name="set_rate_omni_camera_2" pkg="rosservice" type="rosservice" args="call --wait omni/camera_2/set_rate 'rate: 0.0001'" />
+        <node name="set_rate_omni_camera_3" pkg="rosservice" type="rosservice" args="call --wait omni/camera_3/set_rate 'rate: 0.0001'" />
+        <node name="set_rate_omni_camera_4" pkg="rosservice" type="rosservice" args="call --wait omni/camera_4/set_rate 'rate: 0.0001'" />
+        <node name="set_rate_right" pkg="rosservice" type="rosservice" args="call --wait right/set_rate 'rate: 0.0001'" />
+
+        <node name="set_rate_tof_back" pkg="rosservice" type="rosservice" args="call --wait tof_back/set_rate 'rate: 10.0'" />
+        <node name="set_rate_tof_frontleft" pkg="rosservice" type="rosservice" args="call --wait tof_frontleft/set_rate 'rate: 10.0'" />
+        <node name="set_rate_tof_frontright" pkg="rosservice" type="rosservice" args="call --wait tof_frontright/set_rate 'rate: 10.0'" />
+        <node name="set_rate_tof_left" pkg="rosservice" type="rosservice" args="call --wait tof_left/set_rate 'rate: 10.0'" />
+        <node name="set_rate_tof_right" pkg="rosservice" type="rosservice" args="call --wait tof_right/set_rate 'rate: 10.0'" />
+
+        <include file="$(find champ_teleop)/launch/teleop.launch">
+            <arg name="joy" value="true" />
+        </include>
+    </group>
+
+    <include file="$(find subt_spot)/launch/champ.launch">
+        <arg name="name" value="$(arg robot_name)" />
+        <arg name="rviz" value="false" />
+    </include>
+</launch>

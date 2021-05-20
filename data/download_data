@@ -1,0 +1,23 @@
+#!/bin/bash
+
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
+
+dir="$script_dir"
+if [ $# -gt 0 ]; then
+  dir="$1"
+fi
+
+pushd "$dir" >/dev/null || exit 1
+
+echo "Downloading BAG files to $dir" >&2
+
+for f in spot.bag spot2.bag; do
+  if [ ! -f $f ]; then
+    echo "Downloading $f" >&2
+    wget "http://ptak.felk.cvut.cz/darpa-subt/data/share/rosdevday_cloud_filtering/${f}"
+  fi
+done
+
+echo "All BAG files downloaded" >&2
+
+popd || exit 1
