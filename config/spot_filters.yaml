@@ -22,6 +22,7 @@ laser_filter:
             body_model/inflation/padding: 0.01
             filter/do_clipping: True
             filter/do_shadow_test: True
+            filter/max_shadow_distance: 1.5
             # Bounding sphere
             bounding_sphere/compute: True
             bounding_sphere/debug: True
@@ -54,6 +55,7 @@ tof_back_filter:
             body_model/inflation/padding: 0.15
             filter/do_clipping: False
             filter/do_shadow_test: False
+            filter/max_shadow_distance: 0.3
 
 tof_left_filter:
     cloud_filter_chain:
@@ -68,6 +70,7 @@ tof_left_filter:
             body_model/inflation/padding: 0.15
             filter/do_clipping: False
             filter/do_shadow_test: False
+            filter/max_shadow_distance: 0.3
 
 tof_right_filter:
     cloud_filter_chain:
@@ -82,6 +85,7 @@ tof_right_filter:
             body_model/inflation/padding: 0.15
             filter/do_clipping: False
             filter/do_shadow_test: False
+            filter/max_shadow_distance: 0.3
 
 tof_frontleft_filter:
     cloud_filter_chain:
@@ -96,6 +100,7 @@ tof_frontleft_filter:
             body_model/inflation/padding: 0.15
             filter/do_clipping: False
             filter/do_shadow_test: False
+            filter/max_shadow_distance: 0.3
 
 tof_frontright_filter:
     cloud_filter_chain:
@@ -110,4 +115,5 @@ tof_frontright_filter:
             body_model/inflation/padding: 0.15
             filter/do_clipping: False
             filter/do_shadow_test: False
+            filter/max_shadow_distance: 0.3
 

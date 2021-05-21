@@ -30,7 +30,8 @@ cloud_filter_chain:
             "$(arg tf_prefix)rear_right_flipper::contains": 0.03
             "$(arg tf_prefix)camera_4::shadow": 0.0
         filter/do_clipping: True
-        filter/do_shadow_test: False
+        filter/do_shadow_test: True
+        filter/max_shadow_distance: 1.0
         # Bounding sphere
         bounding_sphere/compute: True
         bounding_sphere/debug: True

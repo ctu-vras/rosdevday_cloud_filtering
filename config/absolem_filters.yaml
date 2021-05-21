@@ -56,4 +56,5 @@ realsense_filter:
                 body_model/inflation/scale: 1.35
                 body_model/inflation/padding: 0.01
                 filter/do_clipping: False
-                filter/do_shadow_test: False
+                filter/do_shadow_test: True
+                filter/max_shadow_distance: 0.5

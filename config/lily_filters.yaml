@@ -12,8 +12,10 @@ cloud_filter_chain:
         ]
         body_model/inflation/scale: 1.01
         body_model/inflation/padding: 0.05
+        body_model/inflation/shadow_test/padding: 0.1
         filter/do_clipping: True
-        filter/do_shadow_test: False
+        filter/do_shadow_test: True
+        filter/max_shadow_distance: 1.2
         # Bounding sphere
         bounding_sphere/compute: True
         bounding_sphere/debug: True
