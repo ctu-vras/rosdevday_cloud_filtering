@@ -1,0 +1,16 @@
+<launch>
+    <arg name="robot_name" />
+
+    <group ns="$(arg robot_name)">
+        <node name="set_rate_omni_camera_0" pkg="rosservice" type="rosservice" args="call --wait camera_front/set_rate 'rate: 0.0001'" />
+
+        <node name="set_rate_omni_camera_1" pkg="rosservice" type="rosservice" args="call --wait down_rgbd/set_rate 'rate: 10'" />
+        <node name="set_rate_omni_camera_2" pkg="rosservice" type="rosservice" args="call --wait up_rgbd/set_rate 'rate: 10'" />
+    </group>
+
+    <include file="$(find subt_example)/launch/teleop.launch">
+        <arg name="joystick" value="true" />
+    </include>
+
+    <node name="fake_odom" pkg="tf2_ros" type="static_transform_publisher" args="0 0 0 0 0 0 $(arg robot_name)/odom world" />
+</launch>
