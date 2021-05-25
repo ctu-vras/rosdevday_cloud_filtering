@@ -3,26 +3,16 @@ laser_filter:
     -   name: body_filter
         type: robot_body_filter/RobotBodyFilterPointCloud2
         params:
-            frames/sensor: '$(arg tf_prefix)laser/laser'
             frames/filtering: '$(arg tf_prefix)base_link'
             frames/output: '$(arg tf_prefix)laser/laser'
-            sensor/point_by_point: False
-            sensor/min_distance: 0.2
+            sensor/min_distance: 0.2  # larger because of lidar rendering errors
             sensor/max_distance: 50.0
             ignored_links/bounding_sphere: ["$(arg tf_prefix)payload"]
-            # The next commented line would be more correct, but performance loss is too large because of mesh-based collisions
-            #ignored_links/shadow_test: ["$(arg tf_prefix)laser", "$(arg tf_prefix)payload"]
-            ignored_links/shadow_test: [
-                    "$(arg tf_prefix)laser", "$(arg tf_prefix)payload", "$(arg tf_prefix)base_link",
-                    "$(arg tf_prefix)front_left_upper_leg", "$(arg tf_prefix)front_right_upper_leg", "$(arg tf_prefix)rear_left_upper_leg", "$(arg tf_prefix)rear_right_upper_leg",
-                    "$(arg tf_prefix)front_left_lower_leg", "$(arg tf_prefix)front_right_lower_leg", "$(arg tf_prefix)rear_left_lower_leg", "$(arg tf_prefix)rear_right_lower_leg",
-                    "$(arg tf_prefix)front_left_hip", "$(arg tf_prefix)front_right_hip", "$(arg tf_prefix)rear_left_hip", "$(arg tf_prefix)rear_right_hip",
-            ]
             body_model/inflation/scale: 1.05
             body_model/inflation/padding: 0.01
-            filter/do_clipping: True
-            filter/do_shadow_test: True
-            filter/max_shadow_distance: 1.5
+            body_model/inflation/per_link/scale:
+                "$(arg tf_prefix)payload": 1.1
+            filter/do_shadow_test: False
             # Bounding sphere
             bounding_sphere/compute: True
             bounding_sphere/debug: True
@@ -55,7 +45,6 @@ tof_back_filter:
             body_model/inflation/padding: 0.15
             filter/do_clipping: False
             filter/do_shadow_test: False
-            filter/max_shadow_distance: 0.3
 
 tof_left_filter:
     cloud_filter_chain:
@@ -70,7 +59,6 @@ tof_left_filter:
             body_model/inflation/padding: 0.15
             filter/do_clipping: False
             filter/do_shadow_test: False
-            filter/max_shadow_distance: 0.3
 
 tof_right_filter:
     cloud_filter_chain:
@@ -85,7 +73,6 @@ tof_right_filter:
             body_model/inflation/padding: 0.15
             filter/do_clipping: False
             filter/do_shadow_test: False
-            filter/max_shadow_distance: 0.3
 
 tof_frontleft_filter:
     cloud_filter_chain:
@@ -100,7 +87,6 @@ tof_frontleft_filter:
             body_model/inflation/padding: 0.15
             filter/do_clipping: False
             filter/do_shadow_test: False
-            filter/max_shadow_distance: 0.3
 
 tof_frontright_filter:
     cloud_filter_chain:
@@ -115,5 +101,4 @@ tof_frontright_filter:
             body_model/inflation/padding: 0.15
             filter/do_clipping: False
             filter/do_shadow_test: False
-            filter/max_shadow_distance: 0.3
 
