@@ -5,6 +5,7 @@
     <arg name="gazebo" default="true" doc="If false, the filter will run on a bag file" />
     <arg name="gazebo_gui" default="true" />
     <arg name="software_rendering" default="true" doc="Set to false if your GPU can do OpenGL 3.3" />
+    <arg name="fake_teleop" default="false" doc="If true and gazebo==true, this will replay some teleoperation commands from a bag file." />
     <arg name="data_dir" default="$(dirname)/../data" />
 
     <arg name="tf_prefix" value="$(arg robot)/" if="$(eval robot != '')" />
