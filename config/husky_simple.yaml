@@ -1,0 +1,11 @@
+cloud_filter_chain:
+-   name: body_filter
+    type: robot_body_filter/RobotBodyFilterPointCloud2
+    params:
+        frames/filtering: '$(arg tf_prefix)base_link'
+        frames/output: '$(arg tf_prefix)sensor_rack/front_lidar'
+        sensor/min_distance: 0.05
+        sensor/max_distance: 50.0
+        body_model/inflation/scale: 1.1
+        body_model/inflation/padding: 0.02
+        filter/do_shadow_test: False
