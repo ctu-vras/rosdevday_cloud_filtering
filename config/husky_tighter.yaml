@@ -6,7 +6,11 @@ cloud_filter_chain:
         frames/output: '$(arg tf_prefix)sensor_rack/front_lidar'
         sensor/min_distance: 0.05
         sensor/max_distance: 50.0
-        body_model/inflation/scale: 1.1
-        body_model/inflation/padding: 0.02
+        body_model/inflation/scale: 1.01
+        body_model/inflation/padding: 0.01
+        body_model/inflation/per_link/scale:
+            "$(arg tf_prefix)sensor_rack::collision_top": 1.2
         filter/do_shadow_test: False
+        debug/pcl/inside: True
+        debug/pcl/clip: True
         debug/marker/contains: True

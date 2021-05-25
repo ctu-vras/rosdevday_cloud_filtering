@@ -5,7 +5,7 @@ cloud_filter_chain:
         frames/filtering: '$(arg tf_prefix)base_link'
         frames/output: '$(arg tf_prefix)sensor_rack/front_lidar'
         sensor/point_by_point: False
-        sensor/min_distance: 0.25
+        sensor/min_distance: 0.05
         sensor/max_distance: 50.0
         ignored_links/contains_test: [
             "$(arg tf_prefix)front_left_wheel_link", "$(arg tf_prefix)front_right_wheel_link",
@@ -21,6 +21,7 @@ cloud_filter_chain:
         body_model/inflation/per_link/scale:
             "$(arg tf_prefix)sensor_rack::collision_base::shadow": 0.88
             "$(arg tf_prefix)sensor_rack::collision_top::shadow": 0.6
+            "$(arg tf_prefix)sensor_rack::collision_top::contains": 1.2
         filter/do_clipping: True
         filter/do_shadow_test: True
         # Bounding sphere
