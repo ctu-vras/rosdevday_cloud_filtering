@@ -4,7 +4,7 @@ cloud_filter_chain:
     params:
         frames/filtering: '$(arg tf_prefix)laser/laser'
         sensor/point_by_point: False
-        sensor/min_distance: 0.25
+        sensor/min_distance: 0.22  # larger because of lidar rendering errors
         sensor/max_distance: 50.0
         ignored_links/contains_test: [
                 "$(arg tf_prefix)battery1", "$(arg tf_prefix)battery2",

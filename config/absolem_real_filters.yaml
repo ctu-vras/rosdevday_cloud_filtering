@@ -1,0 +1,24 @@
+scan_filter_chain:
+-   name: RobotBodyFilter
+    type: robot_body_filter/RobotBodyFilterLaserScan
+    params:
+        frames/fixed: '$(arg tf_prefix)odom'
+        frames/filtering: '$(arg tf_prefix)laser'
+        sensor/point_by_point: True
+        sensor/min_distance: 0.03
+        sensor/max_distance: 50.0
+        ignored_links/bounding_sphere: ["$(arg tf_prefix)antenna", "$(arg tf_prefix)base_link::big_collision_box"]
+        ignored_links/shadow_test: ["$(arg tf_prefix)laser", "$(arg tf_prefix)base_link::big_collision_box"]
+        body_model/inflation/scale: 1.07
+        body_model/inflation/padding: 0.01
+        transforms/buffer_length: 60.0
+        transforms/timeout/reachable: 0.2
+        transforms/timeout/unreachable: 0.2
+        # Debug clouds/markers
+        debug/pcl/inside: True
+        debug/pcl/clip: True
+        debug/pcl/shadow: True
+        debug/marker/contains: True
+        debug/marker/shadow: True
+        debug/marker/bounding_sphere: True
+        debug/marker/bounding_box: True

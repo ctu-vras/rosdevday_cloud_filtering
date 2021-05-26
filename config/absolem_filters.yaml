@@ -3,9 +3,7 @@ laser_filter:
     -   name: RobotBodyFilter
         type: robot_body_filter/RobotBodyFilterLaserScan
         params:
-            frames/fixed: '$(arg tf_prefix)base_link'
-            frames/sensor: '$(arg tf_prefix)laser/laser'
-            filter/keep_clouds_organized: True
+            frames/filtering: '$(arg tf_prefix)base_link'
             sensor/point_by_point: False
             sensor/min_distance: 0.03
             sensor/max_distance: 50.0
